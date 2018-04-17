@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="match_parent"
+       android:layout_height="40dp"
+       android:weightSum="1">
+       <ImageView
+           android:id="@+id/user_img"
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_gravity="left"/>
+       <TextView
+           android:id="@+id/user_name"
+           android:textStyle="bold"
+           android:textSize="20dp"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="5dp"
+           android:layout_width="80dp"
+           android:layout_height="30dp" />
+       <TextView
+           android:id="@+id/price"
+           android:layout_marginTop="10dp"
+           android:layout_marginLeft="150dp"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_weight="0.07" />
+   </LinearLayout>
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="出三双轮滑鞋"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/goods_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/good"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/good"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+</LinearLayout>

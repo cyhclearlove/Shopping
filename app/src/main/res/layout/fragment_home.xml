@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:ems="10"
+        android:hint="搜索"
+        android:textSize="18dp"
+        android:maxLines="1"
+        android:inputType="textShortMessage"
+        android:drawablePadding="10dp"
+        android:id="@+id/editText_password"
+        android:layout_below="@+id/editText_search" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@id/android:list"
+        >
+    </ListView>
+</LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatButton"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/plus2"
+        android:layout_marginBottom="100dp"
+        android:layout_marginRight="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:fabSize="normal"
+        app:borderWidth="0dp"
+        app:backgroundTint="#1E90FF"
+        app:rippleColor="#33728dff"
+        app:elevation="8dp"
+        app:pressedTranslationZ="16dp"
+        app:useCompatPadding="false"
+        />
+</android.support.design.widget.CoordinatorLayout>

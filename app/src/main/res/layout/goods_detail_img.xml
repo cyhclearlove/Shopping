@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="380dp"
+    android:layout_height="380dp">
+<ImageView
+    android:layout_gravity="center"
+    android:id="@+id/goods_detail_img_item"
+    android:layout_width="380dp"
+    android:layout_height="380dp" />
+</RelativeLayout>

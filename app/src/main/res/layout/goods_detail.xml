@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:src="@drawable/back"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:textColor="@color/red"
+            android:text="￥250"
+            android:gravity="bottom"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+        <ImageView
+            android:src="@drawable/report"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:background="@color/colorWhite"
+        android:scrollbars="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="400dp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+                <ImageView
+                    android:src="@drawable/head1"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <LinearLayout
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <TextView
+                        android:textStyle="bold"
+                        android:text="cyh"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp" />
+                    <TextView
+                        android:textColor="#B5B5B5"
+                        android:text="1小时前来过"
+                        android:layout_width="200dp"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+            </LinearLayout>
+            <View style="@style/bg_line"/>
+            <TextView
+                android:textSize="25dp"
+                android:layout_marginLeft="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:text="￥250"
+                android:gravity="left|center_vertical"
+                android:layout_width="200dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:text=" 注意 Activity需要用implements关键字实现以下接口 OnValueChangeListener, Formatter, OnScrollListener ,否则无法进行事件监听，例如本例：
+public class NumberPickerActivity extends Activity implements OnValueChangeListener, Formatter, OnScrollListener
+覆写完对应方法后需使用setFormatter(this),setOnValueChangedListener(this),setOnScrollListener(this)把相应事件设置到NumberPicker控件上。
+
+本例通过两种方式获取NumberPicker上的值
+(1)通过OnValueChangeListener监听事件可以同时获取原值和当前值
+(2)在button的click事件中使用 numberPicker.getValue()这个方法获取当前值"
+                android:textColor="@color/black"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content" />
+            <ListView
+                android:divider="@null"
+                android:id="@+id/list_goods_detail_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <ImageView
+            android:src="@drawable/support"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:gravity="center"
+            android:text="点赞"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="20dp" />
+        <ImageView
+            android:src="@drawable/favorite"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:gravity="center"
+            android:text="收藏"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="20dp" />
+        <Button
+            android:textColor="@color/colorWhite"
+            android:background="#FF0000"
+            android:text="我想要"
+            android:layout_marginLeft="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="80dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+</RelativeLayout>
