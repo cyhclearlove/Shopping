@@ -63,7 +63,7 @@
         android:textSize="18dp"
         android:maxLines="1"
         android:maxLength="20"
-        android:singleLine="true"
+
         android:hint="请输入账号"
         android:id="@+id/editText_name"
         android:drawablePadding="10dp"

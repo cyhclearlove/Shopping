@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImagesViewGroup">
+        <attr name="ivg_marginTop" format="dimension" />
+    </declare-styleable>
+
+</resources>

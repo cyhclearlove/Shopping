@@ -2,8 +2,10 @@ package activitytest.example.com.shopping.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -63,6 +65,8 @@ public class Fragment_home extends ListFragment {
     private List<Goods> goods = new ArrayList<>();
     private  ListView listView;
     private GoodsAdapter goodsAdapter;
+    private HorizonListviewAdapter horizonListviewAdapter;
+    private List<Img> imgs = new ArrayList<>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,14 +75,12 @@ public class Fragment_home extends ListFragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         initGoods();
-        goodsAdapter = new GoodsAdapter(getActivity(),R.layout.goods_item,goods);
+        initImgs();
+        horizonListviewAdapter = new HorizonListviewAdapter(getActivity(),imgs);
+        goodsAdapter = new GoodsAdapter(getActivity(),goods,horizonListviewAdapter);
+       // horizontalListView.setAdapter(imgAdapter);
         setListAdapter(goodsAdapter);
-        /*listView.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(getActivity(),GoodsDetailActivity.class);
-                startActivity(intent);
-            }
-        });*/
+
     }
 
 
@@ -87,6 +89,14 @@ public class Fragment_home extends ListFragment {
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_home , container, false);
         listView = (ListView)view.findViewById(android.R.id.list);
+        FloatingActionButton floatButton = (FloatingActionButton)view.findViewById(R.id.floatButton);
+        floatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),GoodsPublishActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
@@ -101,7 +111,12 @@ public class Fragment_home extends ListFragment {
         }
     }
 
-
+    private void initImgs(){
+        Img img = new Img();
+        img.img_item = R.drawable.good;
+        for(int i=0;i<10;i++)
+            imgs.add(img);
+    }
 
 
 

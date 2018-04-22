@@ -5,7 +5,7 @@ package activitytest.example.com.shopping;
  */
 
 public class Img {
-    int img_item;
+    public  int img_item;
     void Img(int img_item){
         this.img_item = img_item;
     }

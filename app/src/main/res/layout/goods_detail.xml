@@ -82,6 +82,8 @@
                 android:layout_width="200dp"
                 android:layout_height="30dp" />
             <TextView
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
                 android:text=" 注意 Activity需要用implements关键字实现以下接口 OnValueChangeListener, Formatter, OnScrollListener ,否则无法进行事件监听，例如本例：
 public class NumberPickerActivity extends Activity implements OnValueChangeListener, Formatter, OnScrollListener
 覆写完对应方法后需使用setFormatter(this),setOnValueChangedListener(this),setOnScrollListener(this)把相应事件设置到NumberPicker控件上。
@@ -92,7 +94,7 @@ public class NumberPickerActivity extends Activity implements OnValueChangeListe
                 android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
-                android:layout_width="350dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <ListView
                 android:divider="@null"
